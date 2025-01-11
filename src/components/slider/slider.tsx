@@ -23,10 +23,23 @@ const Carousel: React.FC<MobileNavProps> = React.memo(
   ({ isNavOpen, toggleMobileNav }) => {
     const dispatch = useDispatch<AppDispatch>();
     const { dataReducer, loading } = useSelector((state: any) => state);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
     useEffect(() => {
       dispatch(fetchExam());
     }, [dispatch]);
+
+      useEffect(() => {
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+    
+        window.addEventListener("resize", handleResize);
+    
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }, []);
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -50,14 +63,17 @@ const Carousel: React.FC<MobileNavProps> = React.memo(
     return (
       <CarouselWrapper isNavOpen={isNavOpen}>
         <TextWrapper>
-          <h4>Lorem ipsum</h4>
+         { windowWidth < 768 ? null : 
+         (<>
+         <h4>Lorem ipsum</h4>
           <p className="text">
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
             Lorem ipsum Lorem ipsum Lorem ipsum
           </p>
+          </>)}
           <CarouselButton>
-            Know More <PlayArrowIcon />
+            {windowWidth < 768 ? <PlayArrowIcon className="know-more"/> :(<>Know More <PlayArrowIcon /> </>)  }
           </CarouselButton>
         </TextWrapper>
 

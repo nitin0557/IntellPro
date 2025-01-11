@@ -73,6 +73,12 @@ export const CarouselButton = styled.button`
 
   @media (max-width: 768px) {
     font-size: 14px;
+    width: 15%;
+    height: 50px;
+    border-radius: 50%;
+
+    .know-more{
+    }
   }
 `;
 

@@ -151,7 +151,8 @@ export const Nav = styled.nav<{
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
+    width: 75%;
+    height: 870px;
     flex-direction: column;
     background: #0f406e;
 
