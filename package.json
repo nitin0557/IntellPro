@@ -1,7 +1,7 @@
 {
   "name": "assignment",
   "version": "0.1.0",
-  "homepage": "https://nitin0557.github.io/EduConnect",
+  "homepage": "https://nitin0557.github.io/EnrollPro",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
