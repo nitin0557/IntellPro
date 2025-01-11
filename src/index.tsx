@@ -21,7 +21,17 @@ const root = ReactDOM.createRoot(
 
 
 const initialState = {};
-const store = createStore(rootReducer, initialState, composeWithDevTools(applyMiddleware(thunk)));
+const composeEnhancers =
+  process.env.NODE_ENV === 'development' && typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    : compose;
+
+const store = createStore(rootReducer, initialState, composeEnhancers(applyMiddleware(thunk)));
+
+
+
+
+// const store = createStore(rootReducer, initialState, composeWithDevTools(applyMiddleware(thunk)));
 
 root.render(
   <Provider store={store}>
