@@ -37,7 +37,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/EnrollPro"
+            path="/IntellPro"
             element={
               <Home
                 isNavOpen={isMobileNavOpen}
