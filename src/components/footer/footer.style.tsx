@@ -87,6 +87,7 @@ export const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      list-style: none;
 
       .icon {
         margin-right: 24px;
@@ -115,6 +116,7 @@ export const Container = styled.div`
 
   .col3 {
     .footer-list {
+      list-style: none;
       .icon {
         margin-right: 16px;
 
