@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/EnrollPro/static/css/main.ffe34ec7.css",
+    "main.js": "/EnrollPro/static/js/main.ea8b3576.js",
+    "static/js/388.796b412a.chunk.js": "/EnrollPro/static/js/388.796b412a.chunk.js",
+    "static/js/728.7e17d194.chunk.js": "/EnrollPro/static/js/728.7e17d194.chunk.js",
+    "static/js/731.b5920c3b.chunk.js": "/EnrollPro/static/js/731.b5920c3b.chunk.js",
+    "static/js/83.74f9ad76.chunk.js": "/EnrollPro/static/js/83.74f9ad76.chunk.js",
+    "static/js/562.79b056a6.chunk.js": "/EnrollPro/static/js/562.79b056a6.chunk.js",
+    "static/media/redux.cjs": "/EnrollPro/static/media/redux.7edfc461ab353f1712ab.cjs",
+    "index.html": "/EnrollPro/index.html",
+    "main.ffe34ec7.css.map": "/EnrollPro/static/css/main.ffe34ec7.css.map",
+    "main.ea8b3576.js.map": "/EnrollPro/static/js/main.ea8b3576.js.map",
+    "388.796b412a.chunk.js.map": "/EnrollPro/static/js/388.796b412a.chunk.js.map",
+    "728.7e17d194.chunk.js.map": "/EnrollPro/static/js/728.7e17d194.chunk.js.map",
+    "731.b5920c3b.chunk.js.map": "/EnrollPro/static/js/731.b5920c3b.chunk.js.map",
+    "83.74f9ad76.chunk.js.map": "/EnrollPro/static/js/83.74f9ad76.chunk.js.map",
+    "562.79b056a6.chunk.js.map": "/EnrollPro/static/js/562.79b056a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ffe34ec7.css",
+    "static/js/main.ea8b3576.js"
+  ]
+}
