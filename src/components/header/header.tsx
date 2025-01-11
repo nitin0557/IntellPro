@@ -78,7 +78,7 @@ const Header: React.FC<MobileNavProps> = ({
         </Hamburger>
 
         <Nav isMobileNavOpen={isMobileNavOpen} isDeskOpen={isDesKtopNavOpen}>
-          <Link to="/" className="nav-item qualification">
+          <Link to="/EduConnect" className="nav-item qualification">
             Qualifications <KeyboardArrowDownIcon />
             <ul className="sub-menu">
               {[
@@ -90,12 +90,12 @@ const Header: React.FC<MobileNavProps> = ({
                 "Lorem Ipsum",
               ].map((item: any, index) => (
                 <li key={index}>
-                  <Link to="/">{item}</Link>
+                  <Link to="/EduConnect">{item}</Link>
                 </li>
               ))}
             </ul>
           </Link>
-          <Link to="/" className="nav-item organization">
+          <Link to="/EduConnect" className="nav-item organization">
             Organizations <KeyboardArrowDownIcon />
             <ul className="sub-menu">
               {[
@@ -107,18 +107,18 @@ const Header: React.FC<MobileNavProps> = ({
                 "Lorem Ipsum",
               ].map((item: any, index) => (
                 <li key={index}>
-                  <Link to="/">{item}</Link>
+                  <Link to="/EduConnect">{item}</Link>
                 </li>
               ))}
             </ul>
           </Link>
-          <Link to="/" className="nav-item">
+          <Link to="/EduConnect" className="nav-item">
             Research & Analysis <KeyboardArrowDownIcon />
           </Link>
-          <Link to="/" className="nav-item">
+          <Link to="/EduConnect" className="nav-item">
             Lorem ipsum <KeyboardArrowDownIcon />
           </Link>
-          <Link to="/" className="nav-item">
+          <Link to="/EduConnect" className="nav-item">
             Lorem ipsum <KeyboardArrowDownIcon />
           </Link>
 

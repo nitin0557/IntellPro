@@ -37,7 +37,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/"
+            path="/EduConnect"
             element={
               <Home
                 isNavOpen={isMobileNavOpen}
