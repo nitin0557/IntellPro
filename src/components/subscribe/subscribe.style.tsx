@@ -1,3 +1,4 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const SubscribeContainer = styled.section`
@@ -100,25 +101,23 @@ export const Button = styled.button`
   }
 `;
 
+const bounceIn = keyframes`
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+`;
+
 export const ImageWrapper = styled.div`
   width: 46%;
   overflow: hidden;
 
-  @keyframes rotateIn {
-    from {
-      transform: rotate(-360deg);
-      opacity: 0;
-    }
-    to {
-      transform: rotate(0);
-      opacity: 1;
-    }
-  }
-  
-  div {
-    animation: rotateIn 3s ease-in-out;
-  }
-  
+ animation: ${bounceIn} 3s ease-in-out;
 
   @media (max-width: 768px) {
     width: 80%; 
@@ -126,6 +125,11 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 40%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 40%;
+  }
 `;

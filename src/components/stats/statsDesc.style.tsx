@@ -1,4 +1,17 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
+
+const bounceIn = keyframes`
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+`;
 
 export const StatsContainer = styled.section`
   display: flex;
@@ -8,23 +21,7 @@ export const StatsContainer = styled.section`
   width: 80%;
   margin: 0 auto;
   background: #f6f6f6;
-
-  @keyframes rotateIn {
-    from {
-      transform: rotate(-360deg);
-      opacity: 0;
-      background: red;
-    }
-    to {
-      transform: rotate(0);
-      opacity: 1;
-      background: green;
-    }
-  }
-
-  section {
-    animation: rotateIn 3s ease-in-out;
-  }
+  animation: ${bounceIn} 3s ease-in-out;
 
   @media (max-width: 768px) {
     width: 90%;

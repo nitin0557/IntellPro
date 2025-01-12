@@ -9,11 +9,13 @@ export const CarouselWrapper = styled.section`
   background-color: #f7f7f7;
   position: relative;
   padding: 0 30px;
+  position: relative;
 
   @media (max-width: 768px) {
-    height: auto;
-    flex-direction: column; /* Stack text and images vertically */
+    height: 300px;
+    flex-direction: column;
     padding: 20px 15px;
+    margin-bottom: 20px;
     opacity: ${(props: { isNavOpen: boolean }) =>
       props.isNavOpen ? "1" : "0"};
   }
@@ -39,14 +41,22 @@ export const TextWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    padding-left: 0;
-    text-align: -webkit-center; /* Center the text on small screens */
+    margin-top: 20px;
+    padding: 40px;
+    text-align: -webkit-center; 
+    position: absolute;
+    bottom: 30%;
+    left: -6px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 40px;
+
 
     h4 {
-      font-size: 1.2rem; /* Smaller font size */
+      font-size: 1.2rem; 
     }
     .text {
-      font-size: 12px; /* Smaller font size */
+      font-size: 12px; 
     }
   }
 `;
@@ -76,9 +86,6 @@ export const CarouselButton = styled.button`
     width: 15%;
     height: 50px;
     border-radius: 50%;
-
-    .know-more{
-    }
   }
 `;
 
@@ -93,7 +100,7 @@ export const ImageContainer = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    margin: 20px 0;
   }
 `;
 
@@ -105,6 +112,12 @@ export const Image = styled.img`
   left: 0;
   transition: all 0.5s ease-in-out;
   opacity: ${(props: { isActive: boolean }) => (props.isActive ? "1" : "0")};
+
+    @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
+
 `;
 
 export const DotsContainer = styled.div`

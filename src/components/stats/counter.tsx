@@ -4,7 +4,7 @@ export const Counter: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
   const incrementCounter = () => {
-    setCount((prevCount) => (prevCount + 1) % 10);
+    setCount((prevCount) => (prevCount + 1) % 200);
   };
 
   useEffect(() => {

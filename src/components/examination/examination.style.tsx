@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
 export const ExaminationsContainer = styled.section`
   display: flex;
@@ -50,31 +51,25 @@ export const TitleColumn = styled.div`
   }
 `;
 
+const bounceIn = keyframes`
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+`;
+
 export const ExamItem = styled.li`
   display: flex;
   align-items: flex-start;
   gap: 15px;
   margin-bottom: 10px;
 
-
-  @keyframes bounceIn {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(10px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-li {
-  animation: bounceIn 3s ease-in-out;
-}
-
+  animation: ${bounceIn} 2s ease-in-out;
 
   .month {
     width: 40px;
@@ -83,6 +78,10 @@ li {
 
   .info-item {
     margin-bottom: 6px;
+
+    @media (max-width: 768px) {
+      color: #7b7c7e;
+    }
   }
 
   @media (max-width: 768px) {

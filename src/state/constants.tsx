@@ -8,7 +8,7 @@ export const fetchdata = {
       id: 1,
       enabled: 1,
       banner_img:
-        "https://bbk-prod-assets.s3.ap-south-1.amazonaws.com/bbk/Takeaway-Performance-Web.jpg",
+        "https://static.vecteezy.com/system/resources/previews/007/644/320/large_2x/white-background-combination-of-blue-gradation-with-wave-style-is-perfect-for-wallpaper-banner-cover-web-landing-page-etc-vector.jpg",
       start_date: "2025-01-01",
       end_date: "2025-12-31",
     },
@@ -16,7 +16,7 @@ export const fetchdata = {
       id: 1,
       enabled: 1,
       banner_img:
-        "https://bbk-prod-assets.s3.ap-south-1.amazonaws.com/bbk/175-off-Christmas-Theme-Web-Banner.jpg",
+      "https://static.vecteezy.com/system/resources/previews/031/611/972/non_2x/abstract-blue-wave-gradient-background-vector.jpg",
       start_date: "2025-01-01",
       end_date: "2025-12-31",
     },
@@ -24,18 +24,10 @@ export const fetchdata = {
       id: 1,
       enabled: 1,
       banner_img:
-        "https://bbk-prod-assets.s3.ap-south-1.amazonaws.com/bbk/com-Biryani-Party-Web.jpg",
+        "https://static.vecteezy.com/system/resources/previews/011/403/897/non_2x/blue-and-white-stripes-banner-background-free-vector.jpg",
       start_date: "2025-01-01",
       end_date: "2025-12-31",
-    },
-    {
-      id: 1,
-      enabled: 1,
-      banner_img:
-        "https://bbk-prod-assets.s3.ap-south-1.amazonaws.com/bbk/Banner-1-1440x420.png",
-      start_date: "2025-01-01",
-      end_date: "2025-12-31",
-    },
+    }
   ],
   offers: [
     {

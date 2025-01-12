@@ -37,7 +37,6 @@ export const Container = styled.div`
       font-size: 21px;
       color: #fff;
 
-
       @media (max-width: 768px) {
         font-size: 18px;
       }
@@ -53,14 +52,12 @@ export const Container = styled.div`
       list-style: none;
       line-height: 1.8;
 
-
       @media (max-width: 768px) {
         font-size: 11px;
         text-decoration: none;
-
       }
     }
-      a {
+    a {
       font-size: 12px;
       color: #fff;
       text-decoration: none;
@@ -74,15 +71,14 @@ export const Container = styled.div`
         display: flex;
         justify-items: center;
         align-items: center;
-
       }
     }
   }
 
   .col2 {
-     h4{
+    h4{
       text-align: center;
-      }
+    }
     .icon-list {
       display: flex;
       justify-content: center;
@@ -100,7 +96,7 @@ export const Container = styled.div`
           margin-right: 16px;
         }
       }
-      
+
       svg {
         fill: #fff;
       }
@@ -122,6 +118,12 @@ export const Container = styled.div`
 
         svg {
           fill: #fff;
+        }
+      }
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+        li{
+          margin-bottom: 5px;
         }
       }
     }

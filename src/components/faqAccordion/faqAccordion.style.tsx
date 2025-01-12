@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
 export const FAQContainer = styled.section`
   width: 80%;
@@ -20,6 +21,19 @@ export const FAQContainer = styled.section`
   }
 `;
 
+const bounceIn = keyframes`
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+`;
+
+
 export const FAQItemContainer = styled.div`
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
@@ -27,23 +41,19 @@ export const FAQItemContainer = styled.div`
   width: 100%;
 
   @keyframes bounceIn {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
-  50% {
-    transform: translateY(10px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-div {
-  animation: bounceIn 3s ease-in-out;
-}
-
+  animation: ${bounceIn} 3s ease-in-out;
 
   @media (max-width: 768px) {
     padding: 12px 0;
@@ -64,11 +74,11 @@ export const Question = styled.div`
 `;
 
 export const Answer = styled.div<{ isOpen: boolean }>`
-  max-height: ${(props) => (props.isOpen ? '500px' : '0')};
+  max-height: ${(props) => (props.isOpen ? "500px" : "0")};
   overflow: hidden;
   font-size: 12px;
   transition: font-size 0.5s ease-in-out;
-  padding: ${(props) => (props.isOpen ? '10px' : '0 10px')};
+  padding: ${(props) => (props.isOpen ? "10px" : "0 10px")};
 
   @media (max-width: 768px) {
     font-size: 13px;

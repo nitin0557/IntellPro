@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
 export const SliderContainer = styled.section`
   position: relative;
@@ -9,12 +10,14 @@ export const SliderContainer = styled.section`
   align-items: center;
   padding: 48px 0;
 
-   
-
-
   @media (max-width: 768px) {
     width: 100%;
     padding: 24px;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `;
 
@@ -24,9 +27,6 @@ export const SliderWrapper = styled.div`
   height: 250px;
   gap: 20px;
 
-
-
-
   @media (max-width: 768px) {
     flex-direction: row;
     height: auto;
@@ -34,7 +34,16 @@ export const SliderWrapper = styled.div`
   }
 `;
 
-export const Card = styled.div`
+const slide = (currentIndex: number) => keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(${currentIndex * 100}%);
+  }
+`;
+
+export const Card = styled.div<{ currentIndex: number }>`
   background-color: #0d4b7f;
   color: white;
   text-align: center;
@@ -42,11 +51,12 @@ export const Card = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: all 0.5s ease-in-out;
   width: 335px;
   height: 200px;
   font-size: 14px;
   text-align: left;
+
+  animation: ${({ currentIndex }) => slide(currentIndex)} 0.5s ease-in-out;
 
   p {
     display: flex;
@@ -66,7 +76,6 @@ export const Card = styled.div`
     width: 250px;
     height: auto;
     font-size: 12px;
-     transition: all 0.5s ease-in-out;
   }
 `;
 
@@ -118,6 +127,7 @@ export const PrevButton = styled.button`
   border: none;
   padding: 10px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.8);
@@ -125,6 +135,7 @@ export const PrevButton = styled.button`
 
   @media (max-width: 768px) {
     padding: 8px;
+    opacity: 0;
   }
 `;
 
@@ -138,6 +149,8 @@ export const NextButton = styled.button`
   border: none;
   padding: 10px;
   cursor: pointer;
+  transition: all 0.5s ease-in;
+
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.8);
@@ -145,5 +158,6 @@ export const NextButton = styled.button`
 
   @media (max-width: 768px) {
     padding: 8px;
+    opacity: 0;
   }
 `;

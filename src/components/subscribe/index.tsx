@@ -28,7 +28,6 @@ export const Subscribe: React.FC<SubscribeProps> = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("Email submitted:", email);
     setEmail("");
     setIsModalOpen(true);
   };
@@ -63,8 +62,8 @@ export const Subscribe: React.FC<SubscribeProps> = () => {
         </Info>
         <ImageWrapper>
           <Image
-            src="https://picsum.photos/536/354"
-            alt="Subscribe to our newsletter"
+            src="https://cdn.prod.website-files.com/5c6d6c45eaa55f57c6367749/623104e9b3e071663f5059df_mobile%20folio.png"
+            alt="Subscribe"
           />
         </ImageWrapper>
       </Container>

@@ -8,8 +8,8 @@ const Footer = lazy(() => import("./components/footer/footer"));
 const Home = lazy(() => import("./components/pages/Home"));
 
 function App() {
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false); // Mobile nav closed by default
-  const [isDesKtopNavOpen, setIsDesKtopNavOpen] = useState<boolean>(false); // Desktop nav closed by default
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(true); 
+  const [isDesKtopNavOpen, setIsDesKtopNavOpen] = useState<boolean>(false); 
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);

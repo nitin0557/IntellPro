@@ -17,7 +17,6 @@ const initialState: State = {
 };
 
 export function dataReducer(state = initialState, action: Actiontypes): State {
-  console.log(action);
   switch (action.type) {
     case FETCH_DATA_REQUEST:
       return {
