@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/IntellPro/static/css/main.ffe34ec7.css",
-    "main.js": "/IntellPro/static/js/main.9d8fd0c6.js",
-    "static/js/388.11d869ab.chunk.js": "/IntellPro/static/js/388.11d869ab.chunk.js",
-    "static/js/728.99c2d674.chunk.js": "/IntellPro/static/js/728.99c2d674.chunk.js",
-    "static/js/731.5feb8331.chunk.js": "/IntellPro/static/js/731.5feb8331.chunk.js",
-    "static/js/83.74f9ad76.chunk.js": "/IntellPro/static/js/83.74f9ad76.chunk.js",
-    "static/js/562.79b056a6.chunk.js": "/IntellPro/static/js/562.79b056a6.chunk.js",
+    "main.js": "/IntellPro/static/js/main.36565b44.js",
+    "static/js/388.6266331c.chunk.js": "/IntellPro/static/js/388.6266331c.chunk.js",
+    "static/js/728.1451e134.chunk.js": "/IntellPro/static/js/728.1451e134.chunk.js",
+    "static/js/731.3ae0af2d.chunk.js": "/IntellPro/static/js/731.3ae0af2d.chunk.js",
+    "static/js/83.a08a7552.chunk.js": "/IntellPro/static/js/83.a08a7552.chunk.js",
+    "static/js/821.713d32cb.chunk.js": "/IntellPro/static/js/821.713d32cb.chunk.js",
     "index.html": "/IntellPro/index.html",
     "main.ffe34ec7.css.map": "/IntellPro/static/css/main.ffe34ec7.css.map",
-    "main.9d8fd0c6.js.map": "/IntellPro/static/js/main.9d8fd0c6.js.map",
-    "388.11d869ab.chunk.js.map": "/IntellPro/static/js/388.11d869ab.chunk.js.map",
-    "728.99c2d674.chunk.js.map": "/IntellPro/static/js/728.99c2d674.chunk.js.map",
-    "731.5feb8331.chunk.js.map": "/IntellPro/static/js/731.5feb8331.chunk.js.map",
-    "83.74f9ad76.chunk.js.map": "/IntellPro/static/js/83.74f9ad76.chunk.js.map",
-    "562.79b056a6.chunk.js.map": "/IntellPro/static/js/562.79b056a6.chunk.js.map"
+    "main.36565b44.js.map": "/IntellPro/static/js/main.36565b44.js.map",
+    "388.6266331c.chunk.js.map": "/IntellPro/static/js/388.6266331c.chunk.js.map",
+    "728.1451e134.chunk.js.map": "/IntellPro/static/js/728.1451e134.chunk.js.map",
+    "731.3ae0af2d.chunk.js.map": "/IntellPro/static/js/731.3ae0af2d.chunk.js.map",
+    "83.a08a7552.chunk.js.map": "/IntellPro/static/js/83.a08a7552.chunk.js.map",
+    "821.713d32cb.chunk.js.map": "/IntellPro/static/js/821.713d32cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ffe34ec7.css",
-    "static/js/main.9d8fd0c6.js"
+    "static/js/main.36565b44.js"
   ]
 }
