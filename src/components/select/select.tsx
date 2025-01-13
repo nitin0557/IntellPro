@@ -9,7 +9,6 @@ import {
   SearchField,
   SearchResults,
   SearchWrapper,
-  SelectSearchWrapper,
 } from "./select.style";
 
 interface SelectProps {
@@ -17,17 +16,19 @@ interface SelectProps {
   placeholder: string;
   toggleMobileNav: any;
   isMobileNavOpen: boolean;
+  isSearchOpen: boolean;
+  handleSearchClicked: any;
+  setIsSearchOpen: any
 }
 
 const Select: React.FC<SelectProps> = ({
   data,
   placeholder,
   isMobileNavOpen,
-  toggleMobileNav,
+  isSearchOpen,
+  setIsSearchOpen
 }) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [selectedItem, setSelectedItem] = useState<string>(placeholder);
-  const [isOpenSelect, setIsOpenSelect] = useState<boolean>(false);
   const [searchText, setSearchText] = useState<string>("");
   const [debouncedText, setDebouncedText] = useState<string>("");
 
@@ -43,8 +44,7 @@ const Select: React.FC<SelectProps> = ({
 
   const closeSelect = useCallback((item: string, index: number) => {
     setSelectedIndex(index);
-    setSelectedItem(item);
-    setIsOpenSelect(false);
+    setIsSearchOpen(false)
   }, []);
 
   useEffect(() => {
@@ -65,8 +65,8 @@ const Select: React.FC<SelectProps> = ({
   };
 
   return (
-    <SelectSearchWrapper onClick={() => setIsOpenSelect(!isOpenSelect)}>
-      {isOpenSelect && (
+    <>
+      {isSearchOpen && (
         <SearchWrapper isMobileNavOpen={isMobileNavOpen}>
           <SearchField>
             <input
@@ -91,7 +91,7 @@ const Select: React.FC<SelectProps> = ({
           </SearchResults>
         </SearchWrapper>
       )}
-    </SelectSearchWrapper>
+    </>
   );
 };
 

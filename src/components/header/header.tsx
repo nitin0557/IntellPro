@@ -125,7 +125,7 @@ const Header: React.FC<MobileNavProps> = ({
           <Search isSearchOpen={isSearchOpen}>
             <SearchIcon
               onClick={handleSearchClicked}
-              style={{ cursor: "pointer" }}
+              className="search-icon"
             />
           </Search>
 
@@ -142,6 +142,10 @@ const Header: React.FC<MobileNavProps> = ({
             toggleMobileNav={toggleMobileNav}
             isMobileNavOpen={isMobileNavOpen}
             placeholder="All"
+            isSearchOpen={isSearchOpen}
+            handleSearchClicked={handleSearchClicked}
+            setIsSearchOpen={setIsSearchOpen}
+            
           />
         )}
       </Container>

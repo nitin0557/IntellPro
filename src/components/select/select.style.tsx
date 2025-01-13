@@ -1,28 +1,16 @@
 import styled from "@emotion/styled";
 
-export const SelectSearchWrapper = styled.div`
-  width: 30%;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  padding-left: 16px;
-  position: relative;
-  column-gap: 12px;
-  position: absolute;
-  top: 0;
-  right: 20px;
-`;
-
 export const SearchWrapper = styled.div`
   width: 400px;
   height: 300px;
-  top: 52px;
-  left: -138px;
+  top: 70px;
+  right: 182px;
   position: absolute;
   box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
   padding: 16px;
   border: 1px solid #ececec;
   background: #fff;
+  border-radius: 12px;
   z-index: 999;
 
   @media (max-width: 768px) {

@@ -224,6 +224,10 @@ export const Search = styled.div`
   margin-right: 26px;
   margin-top: 1px;
   width: 2%;
+  
+  .search-icon{
+    cursor: pointer;
+   }
 
   @media (max-width: 768px) {
       position: absolute;
@@ -238,7 +242,7 @@ export const Search = styled.div`
 ;`;
 
 export const Button = styled.div<{ isDeskOpen: boolean; isNavOpen: boolean }>`
-  width: 10%;
+  width: 13%;
 
   .btn {
     background: #fff;
