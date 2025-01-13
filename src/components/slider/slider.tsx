@@ -51,7 +51,7 @@ const Carousel: React.FC<MobileNavProps> = React.memo(
       setCurrentIndex((prevIndex) =>
         prevIndex === dataReducer?.data?.banners.length - 1 ? 0 : prevIndex + 1
       );
-    }, [dataReducer?.data?.length]);
+    }, [dataReducer?.data?.banners?.length]);
 
     useEffect(() => {
       const autoSlide = setInterval(() => {
