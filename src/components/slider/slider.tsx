@@ -23,23 +23,23 @@ const Carousel: React.FC<MobileNavProps> = React.memo(
   ({ isNavOpen, toggleMobileNav }) => {
     const dispatch = useDispatch<AppDispatch>();
     const { dataReducer, loading } = useSelector((state: any) => state);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
     useEffect(() => {
       dispatch(fetchExam());
     }, [dispatch]);
 
-      useEffect(() => {
-        const handleResize = () => {
-          setWindowWidth(window.innerWidth);
-        };
-    
-        window.addEventListener("resize", handleResize);
-    
-        return () => {
-          window.removeEventListener("resize", handleResize);
-        };
-      }, []);
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -48,9 +48,13 @@ const Carousel: React.FC<MobileNavProps> = React.memo(
     }, []);
 
     const nextSlide = useCallback(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === dataReducer?.data?.banners.length - 1 ? 0 : prevIndex + 1
-      );
+      if (dataReducer?.data?.banners?.length) {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === dataReducer?.data?.banners.length - 1
+            ? 0
+            : prevIndex + 1
+        );
+      }
     }, [dataReducer?.data?.banners?.length]);
 
     useEffect(() => {
@@ -63,17 +67,24 @@ const Carousel: React.FC<MobileNavProps> = React.memo(
     return (
       <CarouselWrapper isNavOpen={isNavOpen}>
         <TextWrapper>
-         { windowWidth < 768 ? null : 
-         (<>
-         <h4>Lorem ipsum</h4>
-          <p className="text">
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-            ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum
-          </p>
-          </>)}
+          {windowWidth < 768 ? null : (
+            <>
+              <h4>Lorem ipsum</h4>
+              <p className="text">
+                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              </p>
+            </>
+          )}
           <CarouselButton>
-            {windowWidth < 768 ? <PlayArrowIcon className="know-more"/> :(<>Know More <PlayArrowIcon /> </>)  }
+            {windowWidth < 768 ? (
+              <PlayArrowIcon className="know-more" />
+            ) : (
+              <>
+                Know More <PlayArrowIcon />{" "}
+              </>
+            )}
           </CarouselButton>
         </TextWrapper>
 
