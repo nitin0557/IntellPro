@@ -10,7 +10,7 @@ export const SubscribeContainer = styled.section`
   }
 `;
 
-export const Container = styled.section`
+export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -45,24 +45,24 @@ export const StatsItem = styled.div`
 `;
 
 export const ItemTitle = styled.h3`
-  font-size: 1.2rem;
+  font-size: 20px;
   margin-bottom: 20px;
   color: #333;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 16px;
     margin-bottom: 15px;
   }
 `;
 
 export const ItemCount = styled.span`
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: bold;
   color: #0056b3;
   margin-bottom: 10px;
 
   @media (max-width: 768px) {
-    font-size: 1.8rem; 
+    font-size: 26px; 
 `;
 
 export const ItemDescription = styled.p`

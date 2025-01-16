@@ -6,24 +6,8 @@ export const ExaminationsContainer = styled.section`
   align-items: flex-start;
   padding: 48px 0;
   gap: 40px;
-  flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
-
-  .exam-data-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-  }
-
-  .exam-list {
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    flex: 1;
-    margin-bottom: 20px;
-  }
 
   @media (max-width: 1024px) {
     width: 90%;
@@ -33,11 +17,21 @@ export const ExaminationsContainer = styled.section`
     width: 100%;
     padding: 24px;
     gap: 20px;
+    flex-wrap: wrap;
+  }
+`;
+
+export const ExamWrapper = styled.div`
+  display: flex;
+  flex-grow: 1;
+
+  .exam-list {
+    width: 100%;
+    margin-bottom: 20px;
   }
 `;
 
 export const TitleColumn = styled.div`
-  flex: 0 0 auto;
   padding-right: 20px;
   border-right: 1px solid #ddd;
   text-align: left;
@@ -115,7 +109,7 @@ export const DescriptionList = styled.ul`
 `;
 
 export const DescriptionItem = styled.li`
-  font-size: 0.9rem;
+  font-size: 14px;
   color: #666;
 `;
 
@@ -123,14 +117,14 @@ export const Title = styled.h2`
   margin-bottom: 10px;
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 20px;
   }
 `;
 
 export const Subtitle = styled.p`
-  font-size: 0.9rem;
+  font-size: 14px;
   color: #666;
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 12px;
   }
 `;

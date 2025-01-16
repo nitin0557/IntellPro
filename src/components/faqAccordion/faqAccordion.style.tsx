@@ -8,10 +8,10 @@ export const FAQContainer = styled.section`
 
   h2 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 24px;
 
     @media (max-width: 768px) {
-      font-size: 1.2rem;
+      font-size: 20px;
     }
   }
 
@@ -79,14 +79,22 @@ export const Answer = styled.div<{ isOpen: boolean }>`
   font-size: 12px;
   transition: font-size 0.5s ease-in-out;
   padding: ${(props) => (props.isOpen ? "10px" : "0 10px")};
+  max-width: 1032px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   @media (max-width: 768px) {
     font-size: 13px;
+    max-width: 300px;
+    text-overflow: ellipsis;
+    max-height: ${({isOpen}) =>(isOpen?'75px':'0px')};
+    white-space: normal;
+    overflow: hidden;
   }
 `;
 
 export const Icon = styled.span`
-  font-size: 1.2em;
+  font-size: 19.2px;
   transition: all 0.5s ease-in-out;
   &.open {
     background: #0f406e;
@@ -98,6 +106,6 @@ export const Icon = styled.span`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.4em;
+    font-size: 22px;
   }
 `;

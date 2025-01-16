@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   ItemCount,
   ItemDescription,
@@ -8,8 +8,16 @@ import {
 } from "./statsDesc.style";
 import { Counter } from "./counter";
 
+interface StatsProps {
+  title: string;
+  count: string;
+  description: string;
+}
+
 export const Stats = () => {
-  const statsData = [
+
+  const statsData: StatsProps[] = useMemo(()=> (
+    [
     {
       title: "Lorem ipsum",
       count: "123+",
@@ -34,7 +42,7 @@ export const Stats = () => {
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
     },
-  ];
+  ]),[]);
 
   return (
     <StatsContainer>

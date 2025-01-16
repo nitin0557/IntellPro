@@ -15,7 +15,7 @@ interface CardProps {
   description: string;
 }
 
-const CardSlider: React.FC = React.memo(() => {
+const CardSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
@@ -90,6 +90,6 @@ const CardSlider: React.FC = React.memo(() => {
       <NextButton onClick={handleNext}>→</NextButton>
     </SliderContainer>
   );
-});
+};
 
 export default CardSlider;

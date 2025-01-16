@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
 import {
-  DateLevel,
   DescriptionItem,
   DescriptionList,
   ExaminationsContainer,
@@ -9,6 +8,7 @@ import {
   TitleColumn,
   ExamItem,
   ExamInfo,
+  ExamWrapper,
 } from "./examination.style";
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 
@@ -45,7 +45,7 @@ export const Examinations: React.FC = () => {
         <Title>Upcoming Examinations</Title>
         <Subtitle>Enquire about the examination & register for the exams</Subtitle>
       </TitleColumn>
-      <div className="exam-data-wrapper">
+      <ExamWrapper>
         {examData.map((exam, index) => (
           <ul key={index} className="exam-list">
             <ExamItem className="exam-item">
@@ -64,7 +64,7 @@ export const Examinations: React.FC = () => {
             </ExamItem>
           </ul>
         ))}
-      </div>
+      </ExamWrapper>
     </ExaminationsContainer>
   );
 };

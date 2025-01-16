@@ -28,7 +28,7 @@ export const TextWrapper = styled.div`
   padding-left: 46px;
 
   h4 {
-    font-size: 1.5rem;
+    font-size: 24px;
     margin-bottom: 10px;
     color: #333;
   }
@@ -53,7 +53,7 @@ export const TextWrapper = styled.div`
 
 
     h4 {
-      font-size: 1.2rem; 
+      font-size: 20px; 
     }
     .text {
       font-size: 12px; 

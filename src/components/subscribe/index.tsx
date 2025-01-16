@@ -13,18 +13,10 @@ import {
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { Modal } from "./modal";
 
-interface InputProps {
-  type: string;
-  placeholder: string;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  required?: boolean;
-}
 
-interface SubscribeProps {}
-
-export const Subscribe: React.FC<SubscribeProps> = () => {
+export const Subscribe: React.FC = () => {
   const [email, setEmail] = useState<string>("");
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -32,7 +24,6 @@ export const Subscribe: React.FC<SubscribeProps> = () => {
     setIsModalOpen(true);
   };
 
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const handleClose = () => {
     setIsModalOpen(!isModalOpen);

@@ -60,9 +60,6 @@ const Select: React.FC<SelectProps> = ({
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(event.target.value);
   };
-  const handleInputClick = (event: React.MouseEvent<HTMLInputElement>) => {
-    event.stopPropagation();
-  };
 
   return (
     <>
@@ -74,7 +71,6 @@ const Select: React.FC<SelectProps> = ({
               placeholder="Search for items..."
               value={debouncedText}
               onChange={handleSearchChange}
-              onClick={handleInputClick}
             />
           </SearchField>
 

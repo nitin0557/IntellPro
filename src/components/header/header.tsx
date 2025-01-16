@@ -27,7 +27,7 @@ interface UserResponse {
   data: { country: string }[];
 }
 
-const Header: React.FC<MobileNavProps> = ({
+const Header: React.FC<MobileNavProps> = React.memo(({
   isMobileNavOpen,
   toggleMobileNav,
   isDesKtopNavOpen,
@@ -35,6 +35,10 @@ const Header: React.FC<MobileNavProps> = ({
   const [userData, setUserData] = useState<string[]>([]);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleSearchClicked = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,9 +57,6 @@ const Header: React.FC<MobileNavProps> = ({
     fetchData();
   }, []);
 
-  const handleSearchClicked = () => {
-    setIsSearchOpen(!isSearchOpen);
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -151,6 +152,6 @@ const Header: React.FC<MobileNavProps> = ({
       </Container>
     </HeaderWrapper>
   );
-};
+});
 
 export default Header;

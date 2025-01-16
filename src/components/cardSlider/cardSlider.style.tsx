@@ -7,7 +7,6 @@ export const SliderContainer = styled.section`
   overflow: hidden;
   margin: auto;
   display: flex;
-  align-items: center;
   padding: 48px 0;
 
   @media (max-width: 768px) {
@@ -24,11 +23,10 @@ export const SliderContainer = styled.section`
 export const SliderWrapper = styled.div`
   display: flex;
   transition: all 0.5s ease-in-out;
-  height: 250px;
+  height: 200px;
   gap: 20px;
 
   @media (max-width: 768px) {
-    flex-direction: row;
     height: auto;
     gap: 5px;
   }
@@ -50,9 +48,8 @@ export const Card = styled.div<{ currentIndex: number }>`
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 1;
   width: 335px;
-  height: 200px;
+  height: auto;
   font-size: 14px;
   text-align: left;
 
@@ -84,7 +81,7 @@ export const CardTitle = styled.h2`
 
   @media (max-width: 768px) {
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 20px;
   }
 `;
 

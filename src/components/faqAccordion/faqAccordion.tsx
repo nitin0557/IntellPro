@@ -53,4 +53,4 @@ export const FaqAccordion: React.FC = () => {
   );
 };
 
-export const MemoizedFAQItemContainer = React.memo(FAQItemContainer);
+
